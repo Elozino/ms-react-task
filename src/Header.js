@@ -5,16 +5,24 @@ import './index.css';
 function Header() {
   return(
     <div>
-      <nav className="header">
-        <div>
-          <h2 className="mscolor">Migrant Assignment</h2>
+      <nav className="navbar navbar-expand-lg navbar-light header">
+        <Link className="navbar-brand mscolor">Migrant Assignment</Link>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarText">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item active">
+              <Link to='/' className="links nav-link">Home <span class="sr-only">(current)</span></Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/contact' className="links nav-link">About</Link>
+            </li>
+            <li className="nav-item">
+              <Link to='/contact' className="links nav-link">Contact</Link>
+            </li>
+          </ul>
         </div>
-        
-        <ul>
-          <li><Link to='/' className="links">Home</Link></li>
-          <li><Link to='/about' className="links">About</Link></li>
-          <li><Link to='/contact' className="links">Contact</Link></li>
-        </ul>
       </nav>
     </div>
   )
